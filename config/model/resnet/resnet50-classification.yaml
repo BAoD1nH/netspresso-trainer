@@ -4,7 +4,7 @@ model:
   checkpoint:
     use_pretrained: True
     load_head: False
-    path: ~
+    path: "outputs/classification_resnet50/version_0/classification_resnet50_best_fx.pt"
     optimizer_path: ~
   freeze_backbone: False
   architecture:
