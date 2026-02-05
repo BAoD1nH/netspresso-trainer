@@ -3,7 +3,7 @@ data:
   task: detection
   format: local  
   path:
-    root: ./data/vietnam_vehicle
+    root: ./data/intersection_traffic
     train:
       image: train/images
       label: train/labels 
@@ -17,5 +17,5 @@ data:
       image: ~
       label: ~
     
-  id_mapping: ['car', 'motorbike', 'truck', 'bus']
+  id_mapping: ['bicycle', 'bus', 'car', 'license-plate', 'motorcycle']
   pallete: ~

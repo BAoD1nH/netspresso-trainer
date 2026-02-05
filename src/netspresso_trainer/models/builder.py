@@ -129,7 +129,7 @@ def build_model(model_conf, num_classes, devices, distributed) -> nn.Module:
 
     elif model_format == 'torch.fx':
         assert Path(model_conf.checkpoint.path).exists()
-        model = torch.load(model_conf.checkpoint.path) #, weights_only=False
+        model = torch.load(model_conf.checkpoint.path, weights_only=False) #, weights_only=False
         model.save_dtype = next(model.parameters()).dtype
         model = model.to(device=devices)
         if distributed:

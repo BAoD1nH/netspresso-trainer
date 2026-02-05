@@ -3,14 +3,14 @@ model:
   name: yolo_fastest_v2
   checkpoint:
     #  1. Default for training
-    use_pretrained: True #False -> True
-    load_head: False #No change
-    path: ~
+    # use_pretrained: True #False -> True
+    # load_head: False #No change
+    # path: ~
 
     # 2. For evaluation and inference
-    # use_pretrained: False
-    # load_head: True
-    # path: "outputs/detection_yolo_fastest_v2/version_17/detection_yolo_fastest_v2_epoch_30.safetensors"
+    use_pretrained: False
+    load_head: True
+    path: "/home/baodinh/netspresso-trainer/outputs/detection_yolo_fastest_v2/version_19/detection_yolo_fastest_v2_best_fx.pt"
 
     optimizer_path: ~
   freeze_backbone: False
