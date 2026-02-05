@@ -2,19 +2,16 @@ model:
   task: detection
   name: yolo_fastest_v2
   checkpoint:
-    ##  1. Default
+    #  1. Default for training
+    use_pretrained: True #False -> True
+    load_head: False #No change
+    path: ~
+
+    # 2. For evaluation and inference
     # use_pretrained: False
-    # load_head: False
-
-    ##  2. Load pretrained model
-    # use_pretrained: True
     # load_head: True
+    # path: "outputs/detection_yolo_fastest_v2/version_17/detection_yolo_fastest_v2_epoch_30.safetensors"
 
-    ##  3. Load trained model (fine-tuned)
-    use_pretrained: False
-    load_head: True
-    # path: ~
-    path: "outputs/detection_yolo_fastest_v2/version_2/detection_yolo_fastest_v2_best.safetensors"
     optimizer_path: ~
   freeze_backbone: False
   architecture:
@@ -32,7 +29,7 @@ model:
     head:
       name: yolo_fastest_head_v2
       params:
-        num_classes: 80 #added for COCO218
+        num_classes: 4 #changed for Vietnam Vehicle Dataset
         anchors:
           &anchors
           - [12.,18., 37.,49., 52.,132.]  # P2

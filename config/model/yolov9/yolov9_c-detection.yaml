@@ -53,6 +53,7 @@ model:
       name: yolo_detection_head
       params:
         version: v9
+        num_classes: 80
         num_anchors: ~
         use_group: true
         reg_max: &reg_max 16

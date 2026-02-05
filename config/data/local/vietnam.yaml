@@ -1,0 +1,21 @@
+data:
+  name: vietnam_vehicle
+  task: detection
+  format: local  
+  path:
+    root: ./data/vietnam_vehicle
+    train:
+      image: train/images
+      label: train/labels 
+    valid:
+      image: valid/images
+      label: valid/labels
+    test:
+      image: test/images
+      label: test/labels
+    pattern:
+      image: ~
+      label: ~
+    
+  id_mapping: ['motorbike', 'car', 'truck', 'bus']
+  pallete: ~

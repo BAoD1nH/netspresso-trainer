@@ -1,0 +1,23 @@
+data:
+  name: inference_custom
+  task: detection
+  format: local
+  path:
+    root: ./data/test_coco
+    
+    # --- ADD THESE DUMMY SECTIONS TO FIX THE ERROR ---
+    train:
+      image: ~  # "~" means null, which is fine, but the key MUST exist
+      label: ~
+    valid:
+      image: ~
+      label: ~
+    # -------------------------------------------------
+
+    test:
+      image: .  # "." means scan the root folder
+      label: ~
+      
+  # Keep your ID mapping as is
+  id_mapping: ["person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch", "potted plant", "bed", "dining table", "toilet", "tv", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]
+  pallete: ~
