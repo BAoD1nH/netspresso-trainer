@@ -1,0 +1,23 @@
+data:
+  name: intersection_flow5k
+  task: detection
+  format: local
+  path:
+    
+    root: ./data/intersection_flow5k
+    train:
+      image: images/train
+      label: labels/train
+    valid:
+      image: images/val
+      label: labels/val
+    test:
+      image: images/val
+      label: labels/val
+    pattern:
+      image: ~
+      label: ~
+    
+
+  id_mapping: ['vehicle', 'bus', 'bicycle', 'pedestrian', 'engine', 'truck', 'tricycle', 'obstacle']
+  pallete: ~
