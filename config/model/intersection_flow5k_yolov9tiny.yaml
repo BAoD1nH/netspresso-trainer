@@ -7,20 +7,30 @@ model:
     # load_head: false       # Reset head for 8 classes
     # path: ~                # Downloads official weights
 
-    ##2. Evaluation and Inference
-    # use_pretrained: false
-    # load_head: true
-    # path: "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny/version_2/detection_yolov9_tiny_best_fx.pt"
-
-    # ## 3. Continue Training from a Checkpoint (epoch 30) -> epoch 50
+    # #2. Evaluation and Inference
     # use_pretrained: true
     # load_head: true
-    # path: "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny/version_2/detection_yolov9_tiny_best_fx.pt"
+    # path: "./outputs/detection_yolov9_tiny/version_2/detection_yolov9_tiny_best.safetensors"
 
-    # 4. Evaluation and Inference after Continued Training
-    use_pretrained: false
+    # # 3. Continue Training from a Checkpoint
+    # use_pretrained: true
+    # load_head: true
+    # path: "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny/version_2/detection_yolov9_tiny_best.safetensors"
+
+    # # 4.  Evaluation from a Checkpoint (epoch 30 -> epoch 50)
+    # use_pretrained: true
+    # load_head: true
+    # path:  "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny_graphmodule/version_0/detection_yolov9_tiny_graphmodule_epoch_20.pt"
+
+    # # 5. Evaluation  a Checkpoint (epoch 30-> epoch 70)
+    # use_pretrained: true
+    # load_head: true
+    # path: "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny/version_4/detection_yolov9_tiny_best.safetensors"
+    
+    # 6. Train (antioverfit)
+    use_pretrained: true
     load_head: true
-    path:  "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny_graphmodule/version_0/detection_yolov9_tiny_graphmodule_epoch_20.pt"
+    path: "/home/baodinh/netspresso-trainer/outputs/detection_yolov9_tiny/version_4/detection_yolov9_tiny_best.safetensors"
     
     optimizer_path: ~
   freeze_backbone: false

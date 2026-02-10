@@ -1,0 +1,19 @@
+training:
+  epochs: 20
+  mixed_precision: True
+  ema: ~
+  max_norm: 10.0
+  optimizer:
+    name: adamw
+    lr: 6e-5
+    betas: [0.9, 0.999]
+    weight_decay: 0.001 # Increased weight decay for stronger regularization (Anti overfitting)
+    no_bias_decay: False
+    no_norm_weight_decay: False
+    overwrite: ~
+  scheduler:
+    name: cosine_no_sgdr
+    warmup_epochs: 3 # Antioverfit: Reduced warmup epochs for faster convergence
+    warmup_bias_lr: 1e-5
+    min_lr: 1e-6
+    end_epoch: 20

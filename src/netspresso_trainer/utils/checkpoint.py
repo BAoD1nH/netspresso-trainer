@@ -43,7 +43,7 @@ def load_checkpoint(f: Union[str, Path]):
                 state_dict[k] = f.get_tensor(k)
         return state_dict
 
-    state_dict = torch.load(file_path, map_location='cpu')
+    state_dict = torch.load(file_path, map_location='cpu', weights_only=False)
     return state_dict
 
 
